@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-color: black;
+  width: 100vw;
+}
+@media (max-device-width: 900px) {
+  .menu .homeLink .services,
+  .about .contact {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-decoration: none;
+    color: black;
+    height: 60px;
+    
+  }
+
+  .menu .dropdown .dropdown-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.7s;
+  }
+
+  .menu .dropdown .hidden {
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-device-width: 901px) {
+  .menu ul li a:hover {
+    background-color: #555;
+  }
+  .menu .dropdown:hover .dropdown-content,
+  .dropdown-content:hover {
+    max-height: 1000px; /* Adjust this value based on your dropdown's height */
+  }
+  .menu .dropdown-content a:hover {
+    background-color: #555;
+  }
+}
+#home, #service1, #service2, #service3 {
+  background-color: white;
+}
+#home:hover, #service1:hover, #service2:hover, #service3:hover {
+  background-color: #555;
+}
+.homeLink,
+.services,
+.about,
+.contact {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-decoration: none;
+  color: black;
+  height: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.content {
+  width: 100vw;
+  
+}
+.homeLink:hover,
+.about:hover,
+.contact:hover,
+.services:hover {
+  background-color: #555;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #333;
+  text-decoration: none;
+  color: black; /* Set the font color to black */
+  user-select: none;
+  height: 60px;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  background-color: #333;
+  min-width: auto;
+  white-space: nowrap;
+  z-index: 2;
+  top: 100%; /* Position the dropdown-content below the menu item */
+  left: 0; /* Align the left edges */
+  transition: max-height 0.7s;
+  
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  width: auto;
+}
+.service {
+  width: 1px;
+}
+.main {
+  
+  width: 100%; /* Set the width of the container */
+  height: calc(100vh - 60px); /* Set the height of the container */
+  
+}
+.mainContent {
+  position: fixed;
+  z-index: 1;
+  background-color: transparent;
+  
+  width: 100vw;
+  height: calc(100vh - 60px);
+}
+.code {
+  position: absolute;
+  left: 0; /* Set the left position (horizontal) */
+  top: 60px;
+  z-index: 0;
+  width: 100vw;
+  height: calc(100vh - 60px);
+}
+#homeContent {
+  height: auto;
+}
+#homeContent {
+  white-space: pre-wrap;
+  max-height: 80vh; /* Set a specific maximum height */
+  overflow: auto; /* Enable both vertical and horizontal scrolling if needed */
+  width: 100%;
+  overflow-x: auto;
+}
+
+
